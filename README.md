@@ -35,4 +35,4 @@ Menu -> Sync -> GitHub -> Push Overleaf changes to GitHub
 ```
 
 ## ⚠️ **Attention**
-N'oubliez pas de pull à chaque fois que vous allez travailler sur le rapport. Cela évite de refaire ce qu'un autre à peut-être déjà fait et cela évite les collisions. La marche à suivre pour faire un pull est la même que pour push, il suffit de choisir pull sur la fenêtre de synchronisation.
+N'oubliez pas de pull à chaque fois que vous allez travailler sur le rapport. Cela évite de refaire ce qu'un autre a peut-être déjà fait et cela évite les collisions. La marche à suivre pour faire un pull est la même que pour push, il suffit de choisir pull sur la fenêtre de synchronisation.
