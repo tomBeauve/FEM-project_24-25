@@ -149,6 +149,7 @@ Using : symmetric stress and strain tensors and isotropic material assumption, w
     \sigma_{23} \\
     \sigma_{13}
     \end{pmatrix}
+    \label{eqn: SoM simplified strain-stress, matrix form}
 \end{equation}
 
 \begin{equation}
@@ -175,16 +176,19 @@ Using : symmetric stress and strain tensors and isotropic material assumption, w
     \gamma_{23} \\
     \gamma_{13}
     \end{pmatrix}
+    \label{eqn: SoM simplified stress-strain, matrix form}
 \end{equation}
 
-with $\gamma_{ij} = 2 \, \varepsilon_{ij}$, which we can thus rewrite as 
+with $\gamma_{ij} = 2 \, \varepsilon_{ij}$, expressed in [rad], which we can thus rewrite as 
 
 \begin{equation}
-\sigma_{ij} = \frac{E}{(1+\nu)(1-2\nu)} \left[ (1 - 2\nu) \varepsilon_{ij} + \nu \, \varepsilon_{\ell \ell} \, \delta_{ij} \right]
+    \varepsilon_{ij} = \frac{1}{E} \left[ (1+\nu) \sigma_{ij} - \nu \, \sigma_{\ell \ell} \, \delta_{ij} \right]
+    \label{eqn: SoM simplified strain-stress, index form}
 \end{equation}
 
 \begin{equation}
-\varepsilon_{ij} = \frac{1}{E} \left[ (1+\nu) \sigma_{ij} - \nu \, \sigma_{\ell \ell} \, \delta_{ij} \right]
+    \sigma_{ij} = \frac{E}{(1+\nu)(1-2\nu)} \left[ (1 - 2\nu) \varepsilon_{ij} + \nu \, \varepsilon_{\ell \ell} \, \delta_{ij} \right]
+    \label{eqn: SoM simplified stress-strain, index form}
 \end{equation}
 
 \subsubsection{Equilibrium equation using displacements \underline{\textbf{u}}}
