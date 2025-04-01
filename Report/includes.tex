@@ -32,6 +32,13 @@
 % table of content
 \renewcommand{\tableofcontentsname}{Table of Contents}
 
+% equations numbering : (section.eqn number)
+\numberwithin{equation}{section}
+\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+
+% list enumeration
+\usepackage{enumitem}
+
 % table of figures
 \renewcommand{\listfigurename}{Table of Figures}
 

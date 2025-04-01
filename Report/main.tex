@@ -49,6 +49,211 @@
 
 
 
+\begin{equation}
+\underline{\mathbf{u}} =
+\begin{pmatrix}
+    u(x,y,z) \\
+    v(x,y,z) \\
+    w(x,y,z)
+\end{pmatrix}, \quad
+\underline{\underline{\boldsymbol{\sigma}}} =
+\begin{pmatrix}
+    \sigma_{xx} & \sigma_{xy} & \sigma_{xz} \\
+    \sigma_{yx} & \sigma_{yy} & \sigma_{yz} \\
+    \sigma_{zx} & \sigma_{zy} & \sigma_{zz}
+\end{pmatrix}, \quad
+\underline{\underline{\boldsymbol{\varepsilon}}} =
+\begin{pmatrix}
+    \varepsilon_{xx} & \varepsilon_{xy} & \varepsilon_{xz} \\
+    \varepsilon_{yx} & \varepsilon_{yy} & \varepsilon_{yz} \\
+    \varepsilon_{zx} & \varepsilon_{zy} & \varepsilon_{zz}
+\end{pmatrix}
+\end{equation}
+
+\subsection{Hypotheses for the general equations} \label{sec: SoM general hyp}
+\begin{itemize}
+    \item Linear Elastic material
+    \item Isotropic material
+    \item Continuous Medium
+\end{itemize}
+
+\subsection{General Equations}
+
+\subsubsection{Equilibrium Equations}
+\paragraph{Volume Equilibrium}
+\begin{equation}
+    \frac{\partial\sigma_{ij}}{\partial x_j} + F_i = 0
+    \label{eqn: SoM volume equilibrium}
+\end{equation}
+\paragraph{Surface equilibrium}
+\begin{equation}
+    T_j = n_i \sigma_{ij}
+    \label{eqn: SoM surface equilibrium}
+\end{equation}
+\paragraph{Moment equilibrium}
+\begin{equation}
+    \sigma_{ij} = \sigma_{ji}
+\end{equation}
+
+\subsubsection{Displacement-Strain Relation}
+Compatibility Equation
+\begin{equation}
+    \underline{\underline{\boldsymbol{\varepsilon}}} = \frac{1}{2} ( \nabla \underline{u} + (\nabla \underline{u})^T )  
+    \quad ; \quad  
+    \varepsilon_{ij} = \frac{1}{2} \left( \frac{\partial u_i}{\partial x_j} + \frac{\partial u_j}{\partial x_i} \right)
+    \label{eqn: SoM displacement-stress }
+\end{equation}
+We note that the strain tensor is symmetric, as $\varepsilon_{ij} = \varepsilon_{ji}$\\
+
+Saint venant ( optional ? ), that the strain field has to respect
+\begin{equation}
+    D_{kk} \, \varepsilon_{ij} + D_{ij} \, \varepsilon_{kk} - D_{jk} \, \varepsilon_{ik} - D_{ik} \, \varepsilon_{jk} = 0
+\end{equation}
+
+\noindent where 
+\begin{equation}
+    D_{ij} = \frac{\partial^2}{\partial x_i \partial x_j}
+\end{equation}
+
+
+\subsubsection{Stress-Strain Relation}
+Hooke's law : Elastic Linear 
+\begin{equation}
+    \underline{\underline{\boldsymbol{\sigma}}} = \underline{\underline{\underline{\underline{\boldsymbol{H}}}}} \space \underline{\underline{\boldsymbol{\varepsilon}}}
+    \quad ; \quad 
+    \sigma_{ij} = H_{ijkl} \space \varepsilon_{kl}
+    \label{eqn: SoM stress-strain}
+\end{equation}
+Using : symmetric stress and strain tensors and isotropic material assumption, we can get 
+\begin{equation}
+    \begin{pmatrix}
+    \varepsilon_{11} \\
+    \varepsilon_{22} \\
+    \varepsilon_{33} \\
+    \gamma_{12} \\
+    \gamma_{23} \\
+    \gamma_{13}
+    \end{pmatrix}= \frac{1}{E}\begin{pmatrix}
+    1 & - \nu & -\nu & 0 & 0 & 0 \\
+    -\nu & 1 & -\nu & 0 & 0 & 0 \\
+    -\nu & -\nu & 1 & 0 & 0 & 0 \\
+     &  &  & 2(1+\nu) & 0 & 0 \\
+     &  \text{SYM}&  &  & 2(1+\nu) & 0 \\
+     &  &  &  &  & 2(1+\nu)
+    \end{pmatrix}
+    \begin{pmatrix}
+    \varepsilon_{11} \\
+    \varepsilon_{22} \\
+    \varepsilon_{33} \\
+    \sigma_{12} \\
+    \sigma_{23} \\
+    \sigma_{13}
+    \end{pmatrix}
+\end{equation}
+
+\begin{equation}
+    \begin{pmatrix}
+    \sigma_{11} \\
+    \sigma_{22} \\
+    \sigma_{33} \\
+    \sigma_{12} \\
+    \sigma_{23} \\
+    \sigma_{13}
+    \end{pmatrix}= \frac{E}{(1+\nu)(1-2\nu)}\begin{pmatrix}
+    (1-\nu) &  \nu & \nu & 0 & 0 & 0 \\
+    \nu & (1-\nu) & \nu & 0 & 0 & 0 \\
+    \nu & \nu & (1-\nu) & 0 & 0 & 0 \\
+     &  &  & \frac{1-2\nu }{2} & 0 & 0 \\
+     &  \text{SYM}&  &  & \frac{1-2\nu }{2} & 0 \\
+     &  &  &  &  & \frac{1-2\nu }{2}
+    \end{pmatrix}
+    \begin{pmatrix}
+    \varepsilon_{11} \\
+    \varepsilon_{22} \\
+    \varepsilon_{33} \\
+    \gamma_{12} \\
+    \gamma_{23} \\
+    \gamma_{13}
+    \end{pmatrix}
+\end{equation}
+
+with $\gamma_{ij} = 2 \, \varepsilon_{ij}$, which we can thus rewrite as 
+
+\begin{equation}
+\sigma_{ij} = \frac{E}{(1+\nu)(1-2\nu)} \left[ (1 - 2\nu) \varepsilon_{ij} + \nu \, \varepsilon_{\ell \ell} \, \delta_{ij} \right]
+\end{equation}
+
+\begin{equation}
+\varepsilon_{ij} = \frac{1}{E} \left[ (1+\nu) \sigma_{ij} - \nu \, \sigma_{\ell \ell} \, \delta_{ij} \right]
+\end{equation}
+
+\subsubsection{Equilibrium equation using displacements \underline{\textbf{u}}}
+
+Navier Equation :
+\begin{comment}
+ \begin{equation}
+    \frac{E}{2(1+\nu)} \left( \frac{\partial^2u_i}{ \partial x_{j} ^2} + \frac{1}{1-2\nu} \, \frac{\partial^2u_i}{\partial x_i \partial x_j} \right) + F_i = 0
+\end{equation}   
+\end{comment}
+
+\begin{equation}
+    \frac{E}{2(1+\nu)} \left( D_{jj} \, u_i + \frac{1}{1-2\nu} D_{ij} \, u_i \right) + F_i = 0
+\end{equation}
+
+\subsubsection{Boundary conditions}
+
+\begin{equation}
+    \begin{pmatrix}
+    u \\
+    v \\
+    w
+    \end{pmatrix} 
+    = 
+    \begin{pmatrix}
+    u_0 \\
+    v_0 \\
+    w_0
+    \end{pmatrix}
+\end{equation}
+on $\Gamma_u$, the clamped surface, where displacements are imposed.
+
+\begin{equation}
+    T_j = n_i \sigma_{ij}
+\end{equation}
+with $q$ and $\mu q$ on $\Gamma_q$, where forces are applied.
+
+\begin{equation}
+    \begin{pmatrix}
+    u \\
+    v \\
+    w
+    \end{pmatrix} 
+    = 
+    \begin{pmatrix}
+    u_0 \\
+    v_0 \\
+    w_0
+    \end{pmatrix}
+    \quad \text{on } \Gamma_u, \text{ the clamped surface, where displacements are imposed.}
+\end{equation}
+
+\begin{equation}
+    T_j = n_i \sigma_{ij} \quad \text{with } T_j \text{ = q or $\mu$q on } \Gamma_q, \text{ where forces are applied. }
+\end{equation}
+
+
+\subsection{Simplifying hypotheses for an analytical solution}
+In addition to the general hypotheses in subsection \ref{sec: SoM general hyp}, in order to study this problem anatically to get a first approximation of the solution, we add the following hypotheses : 
+\begin{itemize}[itemsep = 1pt]
+    \item Plane stress state ( applies for the entire problem)
+    \item No body forces ( e.g. gravity)
+    \item Linear elastic domain ( applies for the entire problem, we are searching $q_{max}$ such that we remain in the elastic domain)
+    \item The ellipse at the bottom of the piece is replaced by an equivalent circle ( see details below)
+    \item Stress concentration factors at fillet ( \textbf{congé de raccordement => anglais ?}), direction changes,... are neglected 
+    \item Conservative Loading
+\end{itemize}
+
+
 
 
 \section{Analysis with the Finite Element Method}
