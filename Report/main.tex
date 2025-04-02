@@ -246,8 +246,8 @@ with $q$ and $\mu q$ on $\Gamma_q$, where forces are applied.
 \end{equation}
 
 
-\subsection{Simplifying hypotheses for an analytical solution}
-In addition to the general hypotheses in subsection \ref{sec: SoM general hyp}, in order to study this problem anatically to get a first approximation of the solution, we add the following hypotheses : 
+\subsection{Simplifying hypotheses}
+In addition to the general hypotheses in subsection \ref{sec: SoM general hyp}, in order to study this problem analytically to get a first approximation of the solution, we add the following hypotheses : 
 \begin{itemize}[itemsep = 1pt]
     \item Plane stress state ( applies for the entire problem)
     \item No body forces ( e.g. gravity)
@@ -256,6 +256,89 @@ In addition to the general hypotheses in subsection \ref{sec: SoM general hyp}, 
     \item Stress concentration factors at fillet ( \textbf{congé de raccordement => anglais ?}), direction changes,... are neglected 
     \item Conservative Loading
 \end{itemize}
+
+As said above, the bottom elliptic ring is replaced by an equivalent cylinder. We do so by keeping the same area, so the equivalent radius is $\R_{eq} = \sqrt{a\, b}$ where $a$ and $b$ are the semi-axes of the ellipses. We thus obtain the equivalent cylinder represented in \autoref{fig: SoM ellipse approx}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Report/figures/SoM_ellipse_approx.png} 
+    \caption{Appoximation used for the bottom ellipse}
+    \label{fig: SoM ellipse approx}
+\end{figure}
+
+\subsection{Simplified Analysis}
+Using the plane stress state, we can rewrite the stress tensor and the Hooke's law as 
+\begin{equation}
+    \underline{\underline{\boldsymbol{\sigma}}} =
+\begin{pmatrix}
+    \sigma_{xx} & \sigma_{xy} & 0 \\
+    \sigma_{yx} & \sigma_{yy} & 0 \\
+    0 & 0 & 0
+\end{pmatrix}, \quad
+\underline{\underline{\boldsymbol{\varepsilon}}} =
+\begin{pmatrix}
+    \varepsilon_{xx} & \varepsilon_{xy} & 0 \\
+    \varepsilon_{yx} & \varepsilon_{yy} & 0\\
+    0 & 0 & 0
+\end{pmatrix}
+\end{equation}
+and, in polar coordinates, for the 2 cylinders 
+\begin{equation}
+    \underline{\underline{\boldsymbol{\sigma}}} =
+    \begin{pmatrix}
+        \sigma_{rr} & \sigma_{r\theta} & 0 \\
+        \sigma_{\theta r} & \sigma_{\theta\theta} & 0 \\
+        0 & 0 & \sigma_{zz}
+    \end{pmatrix}, \quad
+    \underline{\underline{\boldsymbol{\varepsilon}}} =
+    \begin{pmatrix}
+        \varepsilon_{rr} & \varepsilon_{r\theta} & 0 \\
+        \varepsilon_{\theta r} & \varepsilon_{\theta\theta} & 0 \\
+        0 & 0 & \varepsilon_{zz}
+    \end{pmatrix}
+\end{equation}
+And equation ... rewrite as 
+
+\begin{equation}
+    \begin{pmatrix}
+        \varepsilon_{11} \\
+        \varepsilon_{22} \\
+        \gamma_{12}
+    \end{pmatrix}
+    =
+    \frac{1}{E}
+    \begin{pmatrix}
+        1 & -\nu & 0 \\
+        -\nu & 1 & 0 \\
+        0 & 0 & 2(1+\nu)
+    \end{pmatrix}
+    \begin{pmatrix}
+        \sigma_{11} \\
+        \sigma_{22} \\
+        \sigma_{12}
+    \end{pmatrix}
+\end{equation}
+
+
+\begin{equation}
+    \begin{pmatrix}
+    \sigma_{11} \\
+    \sigma_{22} \\
+    \sigma_{12} \\
+    \end{pmatrix}= \frac{E}{(1-\nu^2)}\begin{pmatrix}
+    1 &  \nu & 0  \\
+    \nu & 1 & 0 \\
+    0 & 0 & \frac{1-\nu}{2} 
+    \end{pmatrix}
+    \begin{pmatrix}
+    \varepsilon_{11} \\
+    \varepsilon_{22} \\
+    \gamma_{12}
+    \end{pmatrix}
+\end{equation}
+
+
+\subsubsection{Support Reactions}
 
 
 
