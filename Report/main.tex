@@ -340,6 +340,37 @@ And equation ... rewrite as
 
 \subsubsection{Support Reactions}
 
+Sum of applied forces = sum of reaction forces 
+We decompose the reaction forces in terms of surface tensions applied at the clamped surface, in polar coordinates, $\sigma_r$ and $\sigma_\theta$, respectively in the radial and tangent directions, and assuming they are constant along the thickness, we can write the support reaction as
+
+\begin{equation}
+    \int_{\Gamma_u} \left( \sigma_r \,\underline{e}_r + \sigma_\theta \,\underline{e}_\theta \right) \, R_{int,bottom} d\theta 
+    = 
+    \int_{\Gamma_{q,1}} \left( -q \,\underline{e}_r -  \mu q\,\underline{e}_\theta \right) \, R_{ext,top} d\theta 
+    + 
+    \int_{\Gamma_{q,2}} \left( q \,\underline{e}_r -  \mu q\,\underline{e}_\theta \right) \, R_{int,top} d\theta 
+\end{equation}
+
+Projecting on $e_r$ and $e_\theta$
+
+\begin{equation}
+    \int_{\theta_b^-}^{\theta_b^+} \sigma_r \, R_{int,bottom} d\theta 
+    = 
+    \int_{\theta_{t,1}^-}^{\theta_{t,1}^+}  -q \, R_{ext,top} d\theta 
+    + 
+    \int_{\theta_{t,2}^-}^{\theta_{t,2}^+} q \, R_{int,top} d\theta 
+\end{equation}
+
+\begin{equation}
+    \int_{\theta_b^-}^{\theta_b^+} \sigma_\theta\, R_{int,bottom} d\theta 
+    = 
+    \int_{\theta_{t,1}^-}^{\theta_{t,1}^+} - \mu q\, R_{ext,top} d\theta 
+    + 
+    \int_{\theta_{t,2}^-}^{\theta_{t,2}^+}  -  \mu q \, R_{int,top} d\theta 
+\end{equation}
+
+
+    
 
 
 
