@@ -371,26 +371,16 @@ F_x &=
 
 \begin{align*}
 F_x &=
-\int_{-60^\circ}^{-50^\circ} (-q \sin\theta - \mu q \cos\theta) \cdot 68 \, d\theta
+\int_{-60^\circ}^{-50^\circ} (-q \sin\theta - \mu q \cos\theta) \cdot 34 \, d\theta
 +
-\int_{50^\circ}^{60^\circ} (q \sin\theta - \mu q \cos\theta) \cdot 55 \, d\theta
+\int_{50^\circ}^{60^\circ} (q \sin\theta - \mu q \cos\theta) \cdot 27.5 \, d\theta \\
+&= q \cdot \Big[
+34 \cdot \left( -\cos(-50^\circ) + \cos(-60^\circ) + \mu \cdot (\sin(-50^\circ) - \sin(-60^\circ)) \right) \\
+&\qquad + 27.5 \cdot \left( \cos(50^\circ) - \cos(60^\circ) - \mu \cdot (\sin(60^\circ) - \sin(50^\circ)) \right)
+\Big] \\
+&= \boxed{1.34 \cdot q}
 \end{align*}
 
-\begin{equation}
-\begin{aligned}
-F_x &= -68 \,q \Big[
-    -\cos(-50^\circ) + \cos(-60^\circ) 
-    + \mu \left( \sin(-50^\circ) - \sin(-60^\circ) \right)\Big] \\
-&\qquad + 
-55 \q \Big[ \left( 
-    -\cos(60^\circ) + \cos(50^\circ) 
-    + \mu \left( \sin(60^\circ) - \sin(50^\circ) \right)
-\right)
-\Big] \\
-&= \boxed{-0.6 \cdot q}
-\end{aligned}
-\tag{2.26}
-\end{equation}
 
 \paragraph{Vertical component \( F_y \):}
 \begin{align}
