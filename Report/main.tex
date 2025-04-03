@@ -517,9 +517,9 @@ Substituting $R_{\text{int}} = 31.3$ mm and solving:
 \sigma_\theta = \frac{0.60}{31.3 \cdot 0.845} \cdot q \approx \boxed{+0.0227 \cdot q} \quad [\text{MPa}]
 \]
 
-\subsubsection{Radial displacement field}
+\subsubsection{Radial displacement analysis}
 
-In order to obtain an analytical expression of the displacement field, we make a strong simplification by assuming that the problem is \textbf{purely axisymmetric}. This implies that:
+\paragraph{Axisymmetric simplification.} In order to obtain an analytical expression of the displacement field, we make a strong simplification by assuming that the problem is purely axisymmetric. This implies that:
 
 \begin{itemize}
     \item All quantities depend only on the radial coordinate \( r \), not on the angular direction \( \theta \)
@@ -527,44 +527,84 @@ In order to obtain an analytical expression of the displacement field, we make a
     \item The displacement field is purely radial: \( \vec{u}(r, \theta) = u_r(r) \cdot \vec{e}_r \)
 \end{itemize}
 
-\vspace{0.5em}
+This is clearly an idealised assumption, especially since the actual geometry (e.g., contact arcs) is not perfectly axisymmetric. However, it allows us to reduce the problem to a 1D radial formulation and match it to a known analytical solution from the Mechanics of Solids course: a thick-walled cylinder under radial pressure.
 
-This is clearly a strong and idealised assumption, especially considering that the actual geometry (e.g., contact arcs) and loading are not perfectly axisymmetric. However, this simplification allows us to make analytical progress by reducing the 2D problem to a 1D radial one. 
-
-Most importantly, it enables us to match the loading configuration to a known analytical solution studied in the Mechanics of Solids course, namely the case of a thick-walled cylinder under radial pressure.
-
-\vspace{0.5em}
-
-With this assumption, and neglecting body forces, the Navier equation in cylindrical coordinates simplifies to:
+\paragraph{Governing equation and general solution.} With this assumption and no body forces, the Navier equation in cylindrical coordinates becomes:
 
 \[
 \frac{d}{dr} \left( \frac{1}{r} \cdot \frac{d}{dr}(r u_r) \right) = 0
 \]
 
-Solving this differential equation yields the general expression for the radial displacement:
+Solving this equation yields the general form of the displacement:
 
 \[
 u_r(r) = A \cdot r + \frac{B}{r}
 \]
 
-where \( A \) and \( B \) are constants to be determined from boundary conditions.
+\paragraph{Strains and stresses.} From this, we compute the radial and circumferential strains:
+
+\[
+\varepsilon_{rr} = \frac{du_r}{dr} = A - \frac{B}{r^2}, \qquad
+\varepsilon_{\theta\theta} = \frac{u_r}{r} = A + \frac{B}{r^2}
+\]
+
+The identity \( \varepsilon_{\theta\theta} = \frac{u_r}{r} \) reflects the relative elongation of a circular arc of radius \( r \).
+
+We then use the general tensorial form of Hooke’s law (Eq.~(2.12)):
+
+\[
+\sigma_{ij} = \frac{E}{(1 + \nu)(1 - 2\nu)} \left[ (1 - 2\nu)\varepsilon_{ij} + \nu \, \varepsilon_{\ell\ell} \, \delta_{ij} \right]
+\]
+
+Assuming \( \varepsilon_{zz} = 0 \), we find \( \varepsilon_{\ell\ell} = \varepsilon_{rr} + \varepsilon_{\theta\theta} = 2A \), and the radial stress becomes:
+
+\[
+\sigma_{rr}(r) = \frac{E}{(1 + \nu)(1 - 2\nu)} \left[ A + (\nu - 1) \cdot \frac{B}{r^2} \right]
+\]
+\paragraph{Top left (external contact).}
+
+\textit{Boundary conditions:}
+\[
+\sigma_{rr}(R_1) = 0, \qquad \sigma_{rr}(R_2) = -q
+\]
+
+\textit{Constants obtained:}
+\[
+A = \frac{R_2^2 \cdot q \cdot (-2\nu^2 - \nu + 1)}{E (R_1^2 - R_2^2)}, \qquad
+B = \frac{R_1^2 R_2^2 \cdot q \cdot (2\nu^2 + \nu - 1)}{E (R_1^2 (\nu - 1) + R_2^2 (1 - \nu))}
+\]
 
 
+\vspace{1em}
 
-    
+\paragraph{Top right (internal contact).}
 
+\textit{Boundary conditions:}
+\[
+\sigma_{rr}(R_1) = q, \qquad \sigma_{rr}(R_2) = 0
+\]
 
+\textit{Constants obtained:}
+\[
+A = \frac{R_1^2 \cdot q \cdot (-2\nu^2 - \nu + 1)}{E (R_1^2 - R_2^2)}, \qquad
+B = \frac{R_1^2 R_2^2 \cdot q \cdot (2\nu^2 + \nu - 1)}{E (R_1^2 (\nu - 1) + R_2^2 (1 - \nu))}
+\]
 
-\section{Analysis with the Finite Element Method}
+\vspace{1em}
 
+\paragraph{Bottom ring .}
 
-\subsection{Optimization}
+\textit{Boundary conditions:}
+\[
+\sigma_{rr}(R_1) = \sigma_1, \qquad \sigma_{rr}(R_2) = 0
+\]
 
+\textit{Constants obtained:}
+\[
+A = \frac{R_1^2 \cdot \sigma_1 \cdot (-2\nu^2 - \nu + 1)}{E (R_1^2 - R_2^2)}, \qquad
+B = \frac{R_1^2 R_2^2 \cdot \sigma_1 \cdot (2\nu^2 + \nu - 1)}{E (R_1^2 (\nu - 1) + R_2^2 (1 - \nu))}
+\]
 
-\vfill
-
-\section*{Students' contributions}
-Mr. Goose and Mrs. Goose worked together to understand the problem and write the numerical codes. The summary of the problem and Q2 were written up by Mr. Goose, Q1 and Q3 were completed by Mrs. Goose. Both students corrected the final report.
 
 \newpage
 \bibliography{mybib}
