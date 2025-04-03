@@ -385,36 +385,24 @@ F_x &=
 \paragraph{Vertical component \( F_y \):}
 \begin{align}
 F_y &=
-\int_{\theta_{t1}^-}^{\theta_{t1}^+} (q \cos\theta - \mu q \sin\theta) \, R_{\text{ext}} \, d\theta
+\int_{\theta_{t1}^-}^{\theta_{t1}^+} (q \cos\theta - \mu q \sin\theta) \cdot R_{\text{ext}} \, d\theta
 +
-\int_{\theta_{t2}^-}^{\theta_{t2}^+} (-q \cos\theta - \mu q \sin\theta) \, R_{\text{int}} \, d\theta
+\int_{\theta_{t2}^-}^{\theta_{t2}^+} (-q \cos\theta - \mu q \sin\theta) \cdot R_{\text{int}} \, d\theta
 \tag{2.27}
 \end{align}
 
 \begin{align*}
 F_y &=
-\int_{-60^\circ}^{-50^\circ} (q \cos\theta - \mu q \sin\theta) \cdot 68 \, d\theta
+\int_{-60^\circ}^{-50^\circ} (-q \cos\theta - \mu q \sin\theta) \cdot 34 \, d\theta
 +
-\int_{50^\circ}^{60^\circ} (-q \cos\theta - \mu q \sin\theta) \cdot 55 \, d\theta
+\int_{50^\circ}^{60^\circ} (q \cos\theta - \mu q \sin\theta) \cdot 27.5 \, d\theta \\
+&= q \cdot \Big[
+34 \cdot \left( -\sin(-50^\circ) + \sin(-60^\circ) - \mu \cdot (\cos(-50^\circ) - \cos(-60^\circ)) \right) \\
+&\quad + \; 27.5 \cdot \left( \sin(60^\circ) - \sin(50^\circ) - \mu \cdot (\cos(60^\circ) - \cos(50^\circ)) \right)
+\Big] \\
+&= \boxed{-0.836 \cdot q}
 \end{align*}
 
-\begin{equation}
-\begin{aligned}
-F_y &= -q \Big[
-68 \cdot \left( 
-    \sin(-50^\circ) - \sin(-60^\circ)
-    - \mu \left( \cos(-50^\circ) - \cos(-60^\circ) \right)
-\right) \\
-&\qquad + 
-55 \cdot \left( 
-    -\sin(60^\circ) + \sin(50^\circ)
-    - \mu \left( \cos(60^\circ) - \cos(50^\circ) \right)
-\right)
-\Big] \\
-&= \boxed{-0.93 \cdot q}
-\end{aligned}
-\tag{2.28}
-\end{equation}
 
 \subsubsection{Determination of support surface tensions with 50° contact angle}
 
@@ -480,7 +468,7 @@ R_{\text{int}} \cdot
 \end{pmatrix}
 \]
 
-Substituting $R_{\text{int}} = 31.3$ mm and solving:
+Substituting $R_{\text{int}} = 31.3/2$ mm and solving:
 
 \[
 \begin{pmatrix}
@@ -496,16 +484,16 @@ Substituting $R_{\text{int}} = 31.3$ mm and solving:
 \end{pmatrix}
 \cdot
 \begin{pmatrix}
-0.60 \cdot q \\
-0.93 \cdot q
+F_x \\
+F_y
 \end{pmatrix}
 \]
 
 \[
 \Rightarrow
-\sigma_r = -\frac{0.93}{31.3 \cdot 0.845} \cdot q \approx \boxed{-0.0352 \cdot q} \quad [\text{MPa}]
+\sigma_r = -\frac{F_x}{15.65 \cdot 0.845} \approx \boxed{-0.0756 \cdot F_x} \quad [\text{MPa}]
 \qquad
-\sigma_\theta = \frac{0.60}{31.3 \cdot 0.845} \cdot q \approx \boxed{+0.0227 \cdot q} \quad [\text{MPa}]
+\sigma_\theta = \frac{F_y}{15.65 \cdot 0.845}  \approx \boxed{0.07567 \cdot F_y} \quad [\text{MPa}]
 \]
 
 \subsubsection{Radial displacement field}
