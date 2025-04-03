@@ -363,9 +363,9 @@ To project the radial and tangential vectors onto the Cartesian base:
 \paragraph{Horizontal component \( F_x \):}
 \begin{align}
 F_x &=
-\int_{\theta_{t1}^-}^{\theta_{t1}^+} (-q \sin\theta - \mu q \cos\theta) \, R_{\text{ext}} \, d\theta
+\int_{\theta_{t1}^-}^{\theta_{t1}^+} (-q \sin\theta - \mu q \cos\theta) \, R_{\text{t,ext}} \, d\theta
 +
-\int_{\theta_{t2}^-}^{\theta_{t2}^+} (-q \sin\theta - \mu q \cos\theta) \, R_{\text{int}} \, d\theta
+\int_{\theta_{t2}^-}^{\theta_{t2}^+} (q \sin\theta - \mu q \cos\theta) \, R_{\text{t,int}} \, d\theta
 \tag{2.25}
 \end{align}
 
@@ -373,18 +373,16 @@ F_x &=
 F_x &=
 \int_{-60^\circ}^{-50^\circ} (-q \sin\theta - \mu q \cos\theta) \cdot 68 \, d\theta
 +
-\int_{50^\circ}^{60^\circ} (-q \sin\theta - \mu q \cos\theta) \cdot 55 \, d\theta
+\int_{50^\circ}^{60^\circ} (q \sin\theta - \mu q \cos\theta) \cdot 55 \, d\theta
 \end{align*}
 
 \begin{equation}
 \begin{aligned}
-F_x &= -q \Big[
-68 \cdot \left( 
+F_x &= -68 \,q \Big[
     -\cos(-50^\circ) + \cos(-60^\circ) 
-    + \mu \left( \sin(-50^\circ) - \sin(-60^\circ) \right)
-\right) \\
+    + \mu \left( \sin(-50^\circ) - \sin(-60^\circ) \right)\Big] \\
 &\qquad + 
-55 \cdot \left( 
+55 \q \Big[ \left( 
     -\cos(60^\circ) + \cos(50^\circ) 
     + \mu \left( \sin(60^\circ) - \sin(50^\circ) \right)
 \right)
