@@ -338,36 +338,189 @@ And equation ... rewrite as
 \end{equation}
 
 
-\subsubsection{Support Reactions}
+\subsubsection{Support Reactions in Cartesian Coordinates}
 
-Sum of applied forces = sum of reaction forces 
-We decompose the reaction forces in terms of surface tensions applied at the clamped surface, in polar coordinates, $\sigma_r$ and $\sigma_\theta$, respectively in the radial and tangent directions, and assuming they are constant along the thickness, we can write the support reaction as
-
-\begin{equation}
-    \int_{\Gamma_u} \left( \sigma_r \,\underline{e}_r + \sigma_\theta \,\underline{e}_\theta \right) \, R_{int,bottom} d\theta 
-    = 
-    \int_{\Gamma_{q,1}} \left( -q \,\underline{e}_r -  \mu q\,\underline{e}_\theta \right) \, R_{ext,top} d\theta 
-    + 
-    \int_{\Gamma_{q,2}} \left( q \,\underline{e}_r -  \mu q\,\underline{e}_\theta \right) \, R_{int,top} d\theta 
-\end{equation}
-
-Projecting on $e_r$ and $e_\theta$
+We consider the total resultant force $\mathbf{F}$ coming from the distributed loads applied on the upper arcs of the structure. These loads are decomposed into radial and tangential components, and then projected onto the Cartesian base vectors $\mathbf{e}_x$ and $\mathbf{e}_y$.
 
 \begin{equation}
-    \int_{\theta_b^-}^{\theta_b^+} \sigma_r \, R_{int,bottom} d\theta 
-    = 
-    \int_{\theta_{t,1}^-}^{\theta_{t,1}^+}  -q \, R_{ext,top} d\theta 
-    + 
-    \int_{\theta_{t,2}^-}^{\theta_{t,2}^+} q \, R_{int,top} d\theta 
+\boxed{
+\mathbf{F} =
+\int_{\Gamma_{q1}} (-q\, \mathbf{e}_r - \mu q\, \mathbf{e}_\theta) \, ds
++
+\int_{\Gamma_{q2}} (q\, \mathbf{e}_r - \mu q\, \mathbf{e}_\theta) \, ds
+}
 \end{equation}
 
+To project the radial and tangential vectors onto the Cartesian base:
+
+\begin{align*}
+\mathbf{e}_r \cdot \mathbf{e}_x &= \sin\theta, &
+\mathbf{e}_r \cdot \mathbf{e}_y &= -\cos\theta \\
+\mathbf{e}_\theta \cdot \mathbf{e}_x &= \cos\theta, &
+\mathbf{e}_\theta \cdot \mathbf{e}_y &= \sin\theta
+\end{align*}
+
+\paragraph{Horizontal component \( F_x \):}
+\begin{align}
+F_x &=
+\int_{\theta_{t1}^-}^{\theta_{t1}^+} (-q \sin\theta - \mu q \cos\theta) \, R_{\text{ext}} \, d\theta
++
+\int_{\theta_{t2}^-}^{\theta_{t2}^+} (-q \sin\theta - \mu q \cos\theta) \, R_{\text{int}} \, d\theta
+\tag{2.25}
+\end{align}
+
+\begin{align*}
+F_x &=
+\int_{-60^\circ}^{-50^\circ} (-q \sin\theta - \mu q \cos\theta) \cdot 68 \, d\theta
++
+\int_{50^\circ}^{60^\circ} (-q \sin\theta - \mu q \cos\theta) \cdot 55 \, d\theta
+\end{align*}
+
 \begin{equation}
-    \int_{\theta_b^-}^{\theta_b^+} \sigma_\theta\, R_{int,bottom} d\theta 
-    = 
-    \int_{\theta_{t,1}^-}^{\theta_{t,1}^+} - \mu q\, R_{ext,top} d\theta 
-    + 
-    \int_{\theta_{t,2}^-}^{\theta_{t,2}^+}  -  \mu q \, R_{int,top} d\theta 
+\begin{aligned}
+F_x &= -q \Big[
+68 \cdot \left( 
+    -\cos(-50^\circ) + \cos(-60^\circ) 
+    + \mu \left( \sin(-50^\circ) - \sin(-60^\circ) \right)
+\right) \\
+&\qquad + 
+55 \cdot \left( 
+    -\cos(60^\circ) + \cos(50^\circ) 
+    + \mu \left( \sin(60^\circ) - \sin(50^\circ) \right)
+\right)
+\Big] \\
+&= \boxed{-0.6 \cdot q}
+\end{aligned}
+\tag{2.26}
 \end{equation}
+
+\paragraph{Vertical component \( F_y \):}
+\begin{align}
+F_y &=
+\int_{\theta_{t1}^-}^{\theta_{t1}^+} (q \cos\theta - \mu q \sin\theta) \, R_{\text{ext}} \, d\theta
++
+\int_{\theta_{t2}^-}^{\theta_{t2}^+} (-q \cos\theta - \mu q \sin\theta) \, R_{\text{int}} \, d\theta
+\tag{2.27}
+\end{align}
+
+\begin{align*}
+F_y &=
+\int_{-60^\circ}^{-50^\circ} (q \cos\theta - \mu q \sin\theta) \cdot 68 \, d\theta
++
+\int_{50^\circ}^{60^\circ} (-q \cos\theta - \mu q \sin\theta) \cdot 55 \, d\theta
+\end{align*}
+
+\begin{equation}
+\begin{aligned}
+F_y &= -q \Big[
+68 \cdot \left( 
+    \sin(-50^\circ) - \sin(-60^\circ)
+    - \mu \left( \cos(-50^\circ) - \cos(-60^\circ) \right)
+\right) \\
+&\qquad + 
+55 \cdot \left( 
+    -\sin(60^\circ) + \sin(50^\circ)
+    - \mu \left( \cos(60^\circ) - \cos(50^\circ) \right)
+\right)
+\Big] \\
+&= \boxed{-0.93 \cdot q}
+\end{aligned}
+\tag{2.28}
+\end{equation}
+
+\subsubsection{Determination of support surface tensions with 50° contact angle}
+
+In this section, we compute the surface tensions $\sigma_r$ and $\sigma_\theta$ at the internal support arc of the lower ring, assuming they are constant over the contact surface.
+
+As previously determined, the total reaction force at the bottom must compensate the applied loads:
+\[
+\vec{F}_{\text{support}} = -\vec{F}_{\text{applied}} =
+\begin{pmatrix}
++0.60 \cdot q \\
++0.93 \cdot q
+\end{pmatrix}
+\]
+
+We now consider a more accurate angular contact range of $50^\circ$, symmetrically centered around the vertical axis:
+\[
+\theta_b^- = -25^\circ, \qquad \theta_b^+ = +25^\circ
+\]
+
+We model the surface stress field as:
+\[
+\vec{\sigma}(\theta) = \sigma_r \, \vec{e}_r + \sigma_\theta \, \vec{e}_\theta
+\]
+
+Projecting this field onto the Cartesian basis and integrating over the arc gives:
+
+\begin{align*}
+F_x &= R_{\text{int}} \int_{\theta_b^-}^{\theta_b^+} \left( \sigma_r \sin\theta + \sigma_\theta \cos\theta \right) d\theta \\
+F_y &= R_{\text{int}} \int_{\theta_b^-}^{\theta_b^+} \left( -\sigma_r \cos\theta + \sigma_\theta \sin\theta \right) d\theta
+\end{align*}
+
+This can be written as a matrix system:
+\[
+R_{\text{int}} \cdot
+\begin{pmatrix}
+\int \sin\theta \, d\theta & \int \cos\theta \, d\theta \\
+-\int \cos\theta \, d\theta & \int \sin\theta \, d\theta
+\end{pmatrix}_{-25^\circ}^{25^\circ}
+\begin{pmatrix}
+\sigma_r \\
+\sigma_\theta
+\end{pmatrix}
+=
+\begin{pmatrix}
+F_x \\
+F_y
+\end{pmatrix}
+\]
+
+Evaluating the integrals:
+\[
+\int_{-25^\circ}^{25^\circ} \sin\theta \, d\theta = \cos(-25^\circ) - \cos(25^\circ) = 0 \quad (\text{since cosine is even})
+\]
+\[
+\int_{-25^\circ}^{25^\circ} \cos\theta \, d\theta = \sin(25^\circ) - \sin(-25^\circ) = 2 \cdot \sin(25^\circ) \approx 0.845
+
+\Rightarrow
+\text{Matrix} =
+R_{\text{int}} \cdot
+\begin{pmatrix}
+0 & 0.845 \\
+-0.845 & 0
+\end{pmatrix}
+\]
+
+Substituting $R_{\text{int}} = 31.3$ mm and solving:
+
+\[
+\begin{pmatrix}
+\sigma_r \\
+\sigma_\theta
+\end{pmatrix}
+=
+\frac{1}{31.3}
+\cdot
+\begin{pmatrix}
+0 & -\frac{1}{0.845} \\
+\frac{1}{0.845} & 0
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+0.60 \cdot q \\
+0.93 \cdot q
+\end{pmatrix}
+\]
+
+\[
+\Rightarrow
+\sigma_r = -\frac{0.93}{31.3 \cdot 0.845} \cdot q \approx \boxed{-0.0352 \cdot q} \quad [\text{MPa}]
+\qquad
+\sigma_\theta = \frac{0.60}{31.3 \cdot 0.845} \cdot q \approx \boxed{+0.0227 \cdot q} \quad [\text{MPa}]
+\]
+
+
 
 
     
