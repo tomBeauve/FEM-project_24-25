@@ -1,0 +1,8 @@
+Votre remise a été effectuée avec succès !
+Cours : undefined, Finite Element Method26h Th, 26h Pr, 40h Proj.
+Évaluation : Temporary NX data set + first attempt at solving the problem with mechanics of material
+
+Date de soumission : 04/04/2025 15:22 (UTC+2)
+Taille de la remise : 27 Mo
+Auteur de la remise : Benjamin Bock
+Numéro de confirmation : 920ad94dbce844039164862939d69d05
