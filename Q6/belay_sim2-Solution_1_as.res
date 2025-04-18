@@ -49,34 +49,34 @@
 
 
 
- Start of analysis : APR  3 2025 21:15:39
- On the computer   : MSI-Benjamin
+ Start of analysis : APR 18 2025 23:43:30
+ On the computer   : laptop_tom
  Using O/S         : Win NT 6.2 64 bits
- For user          : b3nja
+ For user          : tbeau
  # OpenMP threads  :   1
 
- MEMORY ZONE AVAILABLE FOR THE DB :                               3895000 WORDS (  1.6% OF TOTAL ZONE)
- WORKING MEMORY ZONE AVAILABLE    :                             246105000 WORDS
+ MEMORY ZONE AVAILABLE FOR THE DB :                               2047000 WORDS (  0.8% OF TOTAL ZONE)
+ WORKING MEMORY ZONE AVAILABLE    :                             247953000 WORDS
 
 
  ===============================================================================
  Status of the DB            : "belay_sim2-Solution_1"
  ================
- DB created by BACON for b3nja (APR  3 2025 21:15:37)
- modified   by BACON for b3nja (APR  3 2025 21:15:37)
- modified   by ASEF for b3nja (APR  3 2025 21:15:39)
+ DB created by BACON for tbeau (APR 18 2025 23:43:28)
+ modified   by BACON for tbeau (APR 18 2025 23:43:28)
+ modified   by ASEF for tbeau (APR 18 2025 23:43:30)
  Release                     :   30.1- 1
- DB file name                : "C:\FEM-project_24-25\Q6\belay_sim2-Solution_1.sdb"
- DB size                     :        3893999 (Max=       649043999)
- Memory allocated            :        3895000
+ DB file name                : "C:\Users\tbeau\OneDrive\Documents\Universite\BAC3\F.E.M\FEM-project_24-25\Q6\belay_sim2-Solution_1.sdb"
+ DB size                     :        2045999 (Max=       649043999)
+ Memory allocated            :        2047000
  Size of the garbage         :              2 (  0.00% of the DB size)
  Relational level            :              0
- Object counter              :          41787
+ Object counter              :           7531
  Pagination flag             :        on (not yet triggered)
  Swap count                  :              6 page I/O on disk
- Used pages in memory        :             58 on              58
+ Used pages in memory        :             30 on              30
  Used records in swap file   :              0 on            9833
- Page alignment garbage      :           1001 (  0.03% of the DB size)
+ Page alignment garbage      :           1001 (  0.05% of the DB size)
  Archive length :            :              0
  Archive garbage :           :              0
  Archive loading endian swap :              0
@@ -84,10 +84,7 @@
  >>> Sold-to info: SoldTO: 1471462 - Universite de Liege Webkey: RA0FB70IM5 <<<
 
 
-                             WORKSPACE MEMORY INCREASED TO :         42000 WORDS
-
-
-                             WORKSPACE MEMORY INCREASED TO :       1279000 WORDS
+                             WORKSPACE MEMORY INCREASED TO :        236000 WORDS
 
 
 
@@ -141,49 +138,50 @@
  PROCEDURE BASED ON
  ORDER IN DATA BASE  0
 
-                             WORKSPACE MEMORY INCREASED TO :       1453000 WORDS
+                             WORKSPACE MEMORY INCREASED TO :       1080000 WORDS
 
 
                              WORKSPACE MEMORY REDUCED   TO :             0 WORDS
 
 
-                             WORKSPACE MEMORY INCREASED TO :       1453000 WORDS
+                             WORKSPACE MEMORY INCREASED TO :       1080000 WORDS
 
 
-                             WORKSPACE MEMORY REDUCED   TO :       1142000 WORDS
+                             WORKSPACE MEMORY REDUCED   TO :        204000 WORDS
 
 
 
           CHARACTERISTICS OF THIS PROBLEM
           ===============================
 
-          NUMBER OF NODES                               21311
-          MAXIMUM NODE NUMBER                           24330
-          MINIMUM NODE NUMBER                             444
-          NUMBER OF INTERFACES                          41782
+          NUMBER OF NODES                                3931
+          MAXIMUM NODE NUMBER                            3931
+          MINIMUM NODE NUMBER                               1
+          NUMBER OF INTERFACES                           7526
           NUMBER OF LOCAL AXIS SYSTEMS                      0
-          TOTAL NUMBER OF ELEMENTS                      20470
-          MAXIMUM ELEMENT NUMBER                        23344
+          TOTAL NUMBER OF ELEMENTS                       3594
+          MAXIMUM ELEMENT NUMBER                         3594
           NUMBER OF GENERAL PROPERTY ENTRIES                0
           NUMBER OF ELEMENT PROPERTY ENTRIES                0
           NUMBER OF ELEMENT ATTRIBUTE ENTRIES               0
 
 
-          NUMBER OF ELEMENTS OF TYPE   15               20470
+          NUMBER OF ELEMENTS OF TYPE   15                3591
+          NUMBER OF ELEMENTS OF TYPE   26                   3
 
-                             WORKSPACE MEMORY INCREASED TO :       1144000 WORDS
-
-
-                             WORKSPACE MEMORY INCREASED TO :       1350000 WORDS
+                             WORKSPACE MEMORY INCREASED TO :        206000 WORDS
 
 
-                             WORKSPACE MEMORY INCREASED TO :       1432000 WORDS
+                             WORKSPACE MEMORY INCREASED TO :        242000 WORDS
 
 
-                             WORKSPACE MEMORY INCREASED TO :       1765000 WORDS
+                             WORKSPACE MEMORY INCREASED TO :        256000 WORDS
 
 
-                             WORKSPACE MEMORY INCREASED TO :       1952000 WORDS
+                             WORKSPACE MEMORY INCREASED TO :        316000 WORDS
+
+
+                             WORKSPACE MEMORY INCREASED TO :        349000 WORDS
 
 
 
@@ -194,19 +192,19 @@
 
           SPARSE SOLVER
 
-                             WORKSPACE MEMORY INCREASED TO :     246083000 WORDS
+                             WORKSPACE MEMORY INCREASED TO :     247949000 WORDS
 
 
           CORE MEMORY ESTIMATION FOR BCSLIB SOLVER
           ----------------------------------------
 
-    WORK SPACE REQUIRED OUTSIDE SOLVER                                      787931
+    WORK SPACE REQUIRED OUTSIDE SOLVER                                      140599
 
-    WORK SPACE AVAILABLE INSIDE SOLVER                                   248783069
-    WORK SPACE REQUIRED FOR REORGANIZATION                                 1949281
-    WORK SPACE REQUIRED FOR SYMBOLIC FACTORIZATION                         1713175
-    WORK SPACE MINIMUM FOR OUT OF CORE FACTORIZATION                       3943184
-    WORK SPACE RECOMMENDED FOR IN CORE FACTORIZATION                      10860790
+    WORK SPACE AVAILABLE INSIDE SOLVER                                   249448401
+    WORK SPACE REQUIRED FOR REORGANIZATION                                  347909
+    WORK SPACE REQUIRED FOR SYMBOLIC FACTORIZATION                          339475
+    WORK SPACE MINIMUM FOR OUT OF CORE FACTORIZATION                        757118
+    WORK SPACE RECOMMENDED FOR IN CORE FACTORIZATION                       1438154
 
 
  CHECK OF MATERIALS
@@ -218,7 +216,7 @@
    LINEAR ELASTIC BEHAVIOR
 
      ELASTIC PROPERTIES
-        ISOTROPIC YOUNG MODULUS.......YT  = 7.2000E+07
+        ISOTROPIC YOUNG MODULUS.......YT  = 7.2000E+10
         POISSON COEFFICIENT...........NT  = 3.4500E-01
 
      SPECIFIC PARAMETERS
@@ -243,12 +241,12 @@
 
 
  NUMBER OF SUBSTRUCTURES                        1
- NUMBER OF DEGREES OF FREEDOM              124438
- NUMBER OF RETAINED D.O.F.                 124438
- MAX. DIM. OF A SUBSTRUCTURE               124438
- MAX. NUMBER FOR A D.O.F.                  124502
- MAX. NUMBER FOR A NODE                     24330
- NUMBER OF ELEMENTS                         20470
+ NUMBER OF DEGREES OF FREEDOM               22200
+ NUMBER OF RETAINED D.O.F.                  22200
+ MAX. DIM. OF A SUBSTRUCTURE                22200
+ MAX. NUMBER FOR A D.O.F.                   22226
+ MAX. NUMBER FOR A NODE                      3931
+ NUMBER OF ELEMENTS                          3594
  MAX. DIM. OF AN ELEMENT                       12
  PRINTOUT OPTIONS                          0    0    0    0   -1   -1
  ELEMENT LOADING OPTION (IFO)                   1
@@ -271,10 +269,10 @@
  --------------------------------------------------
 
                                   G++M++K++U
- PROCESSING OF LOADS                 1410058  WORDS
- MATRIX CONDENSATION                11648721
+ PROCESSING OF LOADS                  251536  WORDS
+ MATRIX CONDENSATION                 1578753
  BACK SUBSTITUTION                         0
- PRINTOUT OF RESULTS                  540772
+ PRINTOUT OF RESULTS                   96932
 
 
  RECORD NO   1  WRITTEN IN STORAGE FILE NO  18
@@ -285,20 +283,20 @@
 
    UNIT  FILE                                        NUMBER OF 1 MEGABYTES BLOCK
 
-    18   C:\FEM-project_24-25\Q6\belay_sim2-Solution_1_as.u18                 59
-     1   C... roject_24-25\Q6\S000018700\belay_sim2-Solution_1_as.w01          2
-     4   C:\FEM-project_24-25\Q6\S000018700\belay_sim2-Solution_1.u04         74
-     8   C... roject_24-25\Q6\S000018700\belay_sim2-Solution_1_as.w08         19
-     9   C:\FEM-project_24-25\Q6\S000018700\belay_sim2-Solution_1.u09          2
-    10   C... roject_24-25\Q6\S000018700\belay_sim2-Solution_1_as.w10          3
-    11   C:\FEM-project_24-25\Q6\S000018700\belay_sim2-Solution_1.u11         17
-    13   C:\FEM-project_24-25\Q6\S000018700\belay_sim2-Solution_1.u13          4
-    14   C... roject_24-25\Q6\S000018700\belay_sim2-Solution_1_as.w14          2
-    52   C:\FEM-project_24-25\Q6\S000018700\belay_sim2-Solution_1.u52          1
+    18   C... F.E.M\FEM-project_24-25\Q6\belay_sim2-Solution_1_as.u18         11
+     1   C... roject_24-25\Q6\S000019364\belay_sim2-Solution_1_as.w01          1
+     4   C... M-project_24-25\Q6\S000019364\belay_sim2-Solution_1.u04         13
+     8   C... roject_24-25\Q6\S000019364\belay_sim2-Solution_1_as.w08          4
+     9   C... M-project_24-25\Q6\S000019364\belay_sim2-Solution_1.u09          1
+    10   C... roject_24-25\Q6\S000019364\belay_sim2-Solution_1_as.w10          1
+    11   C... M-project_24-25\Q6\S000019364\belay_sim2-Solution_1.u11          3
+    13   C... M-project_24-25\Q6\S000019364\belay_sim2-Solution_1.u13          1
+    14   C... roject_24-25\Q6\S000019364\belay_sim2-Solution_1_as.w14          1
+    52   C... M-project_24-25\Q6\S000019364\belay_sim2-Solution_1.u52          1
 
          ESTIMATIONS FOR BCSLIB SOLVER
-     2   C... roject_24-25\Q6\S000018700\belay_sim2-Solution_1_as.w02         10
-     3   C... roject_24-25\Q6\S000018700\belay_sim2-Solution_1_as.w03          2
+     2   C... roject_24-25\Q6\S000019364\belay_sim2-Solution_1_as.w02          2
+     3   C... roject_24-25\Q6\S000019364\belay_sim2-Solution_1_as.w03          1
 
 
  SUMMARY OF DISK SPACE USAGE
@@ -308,114 +306,111 @@
                                 TOTAL           FREE        ALLOCATED BY SAMCEF
  -------------------------------------------------------------------------------
 
-    C:\                       180099.          35371.      >           195 OK
+    C:\                       974724.         626857.      >            40 OK
 
  -------------------------------------------------------------------------------
 
  RECORD NO   8  WRITTEN IN STORAGE FILE NO  18
-  CPU=  0 H  0 Min  1.77 Sec.     Elapsed=  0 H  0 Min  2.00 Sec.     R= 88.3%
+  CPU=  0 H  0 Min  0.31 Sec.     Elapsed=  0 H  0 Min  1.00 Sec.     R= 31.2%
 1
 
  MEMORY ZONE AVAILABLE FOR THE DB :                             200000000 WORDS ( 80.0% OF TOTAL ZONE)
- WORKING MEMORY ZONE AVAILABLE    :                              49978000 WORDS
+ WORKING MEMORY ZONE AVAILABLE    :                              49996000 WORDS
 
-0AVAILABLE WORKSPACE FOR THE ELEMENT GENERATION STEP:   49978000  WORDS
+0AVAILABLE WORKSPACE FOR THE ELEMENT GENERATION STEP:   49996000  WORDS
 
  STRUCTURE CHARACTERISTICS
  =========================
  TOTAL LENGTH     0.000000E+00
- TOTAL AREA       2.952991E+03
- TOTAL VOLUME     3.691239E+04
+ TOTAL AREA       2.953053E-03
+ TOTAL VOLUME     3.691317E-05
  TOTAL MASS       0.000000E+00
 
  RECORD NO   9  WRITTEN IN STORAGE FILE NO  18
  END OF THE GENERATION OF ELEMENTS
-  CPU=  0 H  0 Min  2.48 Sec.     Elapsed=  0 H  0 Min  2.00 Sec.     R=124.2%
+  CPU=  0 H  0 Min  0.44 Sec.     Elapsed=  0 H  0 Min  1.00 Sec.     R= 43.8%
 
  MEMORY ZONE AVAILABLE FOR THE DB :                             200000000 WORDS ( 80.0% OF TOTAL ZONE)
- WORKING MEMORY ZONE AVAILABLE    :                              49978000 WORDS
+ WORKING MEMORY ZONE AVAILABLE    :                              49996000 WORDS
 
 
  CHECK OF THE DIAGONAL OF THE STIFFNESS MATRIX
  =============================================
 
- GREATEST DIAGONAL TERM   7.909898E+09   (ELEMENT     22619      COMP.   3)
- LOWEST DIAGONAL TERM     8.136542E+08   (NODE      22730        COMP.   2)
+ GREATEST DIAGONAL TERM   1.075214E+10   (ELEMENT       390      COMP.   1)
+ LOWEST DIAGONAL TERM     8.046967E+08   (NODE       2275        COMP.   2)
 
- MEAN OF DIAGONAL TERMS   2.984184E+09
+ MEAN OF DIAGONAL TERMS   2.958393E+09
 
-        64 FIXATION(S) ISSUING FROM THE DATA ANALYSIS
+        26 FIXATION(S) ISSUING FROM THE DATA ANALYSIS
          0 NEW FIXATION(S) ISSUING FROM THE DIAGONAL INSPECTION
-  CPU=  0 H  0 Min  2.50 Sec.     Elapsed=  0 H  0 Min  2.00 Sec.     R=125.0%
+  CPU=  0 H  0 Min  0.44 Sec.     Elapsed=  0 H  0 Min  1.00 Sec.     R= 43.8%
 
  RESOLUTION BY SPARSE SOLVER
  ===========================
 
 
  Time before the resolution
-  CPU=  0 H  0 Min  2.53 Sec.     Elapsed=  0 H  0 Min  2.00 Sec.     R=126.6%
+  CPU=  0 H  0 Min  0.45 Sec.     Elapsed=  0 H  0 Min  1.00 Sec.     R= 45.3%
 
- Work space available for bcslib                             49314509
- Work space bcslib, minimum 1                                 1949281
- Work space bcslib, minimum 2                                 1713175
- Work space bcslib out-of-core factorization                  3943184
- Work space bcslib incore factorization                       9873445
+ Work space available for bcslib                             49877603
+ Work space bcslib, minimum 1                                  347909
+ Work space bcslib, minimum 2                                  339475
+ Work space bcslib out-of-core factorization                   757118
+ Work space bcslib incore factorization                       1307413
 
  Time after the resolution
-  CPU=  0 H  0 Min  3.05 Sec.     Elapsed=  0 H  0 Min  3.00 Sec.     R=101.6%
+  CPU=  0 H  0 Min  0.50 Sec.     Elapsed=  0 H  0 Min  1.00 Sec.     R= 50.0%
 
  ===========================================================
  = BCSLIB-EXT Release 4.1     ( 15 Nov 2001 )              =
  = multifrontal statistics                                 =
  ===========================================================
 
-     number of equations                     =          124438
-     no. of nonzeroes in lower triangle of a =         1128999
-     number of compressed nodes              =           41749
-     no. of compressed nonzeroes in l. tri.  =          164409
-     amount of workspace currently in use    =         9378597
-     max. amt. of workspace used             =        49314504
-     no. of nonzeroes in the factor l        =         6101419.
-     number of super nodes                   =            4162
-     number of compressed subscripts         =          122834
-     size of stack storage                   =           70221
-     maximum order of a front matrix         =             292
-     maximum size of a front matrix          =           42778
-     maximum size of a front trapezoid       =           28608
-     no. of floating point ops for factor    =      4.0377D+08
-     no. of floating point ops for solve     =      2.5028D+07
-     actual no. of nonzeroes in the factor l =         6101419.
-     actual number of compressed subscripts  =          122834
-     actual size of stack storage used       =          122176
+     number of equations                     =           22200
+     no. of nonzeroes in lower triangle of a =          198788
+     number of compressed nodes              =            7509
+     no. of compressed nonzeroes in l. tri.  =           28993
+     amount of workspace currently in use    =         1183840
+     max. amt. of workspace used             =        49877597
+     no. of nonzeroes in the factor l        =          581500.
+     number of super nodes                   =            2183
+     number of compressed subscripts         =           35960
+     size of stack storage                   =           13105
+     maximum order of a front matrix         =             124
+     maximum size of a front matrix          =            7750
+     maximum size of a front trapezoid       =            6923
+     no. of floating point ops for factor    =      2.2555D+07
+     no. of floating point ops for solve     =      2.4370D+06
+     actual no. of nonzeroes in the factor l =          581500.
+     actual number of compressed subscripts  =           35960
+     actual size of stack storage used       =           31056
      near zero pivot monitoring activated
      number of pivots adjusted               =              0.
      factorization panel size                =             128
      factorization update panel size         =              64
      solution block size                     =               8
 
-     time (in seconds) for structure input   =        0.125000
-     time (in seconds) for ordering          =        0.218750
-     time (in seconds) for symbolic factor   =        0.015625
-     time (in seconds) for value input       =        0.046875
+     time (in seconds) for structure input   =        0.015625
+     time (in seconds) for ordering          =        0.015625
+     time (in seconds) for symbolic factor   =        0.000000
+     time (in seconds) for value input       =        0.000000
 
      number of cpus used for factor & solve  =               1
-     time (in seconds) for numeric factor    =        0.093750
-     computational rate (mflops) for factor  =     4306.836277
+     time (in seconds) for numeric factor    =        0.015625
+     computational rate (mflops) for factor  =     1443.495424
      condition number estimate               =      0.0000D+00
-
-     time (in seconds) for numeric solve     =        0.015625
-     computational rate (mflops) for solve   =     1601.783424
 
      i/o statistics:   unit number        length        amount
                                          (Mbytes)      (Mbytes)
                        -----------       --------      --------
 
-                                3.           1.97          4.91
+                                3.           0.58          1.44
 
  END OF THE STIFFNESS MATRIX CONDENSATION
-  CPU=  0 H  0 Min  3.05 Sec.     Elapsed=  0 H  0 Min  3.00 Sec.     R=101.6%
+  CPU=  0 H  0 Min  0.50 Sec.     Elapsed=  0 H  0 Min  1.00 Sec.     R= 50.0%
 
- LOAD CASE NO        1                    TOTAL POTENTIAL ENERGY   5.696196E+07
+ LOAD CASE NO        1                    TOTAL POTENTIAL ENERGY   5.446398E+00
  ---------------------                    ----------------------
 
 
@@ -423,47 +418,47 @@
  RESULTANTS AT NODES
  -------------------
                           ALONG X          ALONG Y          ALONG Z
- A) LOADS            -5.366850E+06     2.683425E+07     0.000000E+00
- B) REACTIONS         5.366850E+06    -2.683425E+07     0.000000E+00
+ A) LOADS             8.050048E+02     4.254089E+02     0.000000E+00
+ B) REACTIONS        -8.050048E+02    -4.254089E+02     0.000000E+00
 
 
  **********************************************************************
 
  END OF DISPLACEMENT STORAGE
-  CPU=  0 H  0 Min  3.08 Sec.     Elapsed=  0 H  0 Min  3.00 Sec.     R=102.6%
+  CPU=  0 H  0 Min  0.50 Sec.     Elapsed=  0 H  0 Min  1.00 Sec.     R= 50.0%
 
  MEMORY ZONE AVAILABLE FOR THE DB :                             200000000 WORDS ( 80.0% OF TOTAL ZONE)
- WORKING MEMORY ZONE AVAILABLE    :                              49978000 WORDS
+ WORKING MEMORY ZONE AVAILABLE    :                              49996000 WORDS
 
 
  END OF STRESS STORAGE ON U18 FILE
-  CPU=  0 H  0 Min  3.69 Sec.     Elapsed=  0 H  0 Min  4.00 Sec.     R= 92.2%
+  CPU=  0 H  0 Min  0.56 Sec.     Elapsed=  0 H  0 Min  1.00 Sec.     R= 56.2%
 
  ===============================================================================
  Status of the DB            : "belay_sim2-Solution_1"
  ================
- DB created by BACON for b3nja (APR  3 2025 21:15:37)
- modified   by BACON for b3nja (APR  3 2025 21:15:37)
- modified   by ASEF for b3nja (APR  3 2025 21:15:39)
+ DB created by BACON for tbeau (APR 18 2025 23:43:28)
+ modified   by BACON for tbeau (APR 18 2025 23:43:28)
+ modified   by ASEF for tbeau (APR 18 2025 23:43:30)
  Release                     :   30.1- 1
- DB file name                : "C:\FEM-project_24-25\Q6\belay_sim2-Solution_1.sdb"
- DB size                     :        5213999 (Max=       649043999)
+ DB file name                : "C:\Users\tbeau\OneDrive\Documents\Universite\BAC3\F.E.M\FEM-project_24-25\Q6\belay_sim2-Solution_1.sdb"
+ DB size                     :        2573999 (Max=       649043999)
  Memory allocated            :      200000000
  Size of the garbage         :              2 (  0.00% of the DB size)
  Relational level            :              0
- Object counter              :          41795
+ Object counter              :           7539
  Pagination flag             :        on (not yet triggered)
  Swap count                  :              6 page I/O on disk
- Used pages in memory        :             78 on            3029
+ Used pages in memory        :             38 on            3029
  Used records in swap file   :              0 on            9833
- Page alignment garbage      :          20001 (  0.38% of the DB size)
+ Page alignment garbage      :          20002 (  0.78% of the DB size)
  Archive length :            :              0
  Archive garbage :           :              0
  Archive loading endian swap :              0
  ===============================================================================
 
  SAVING AND CLOSING OF DATA BASE
- FILE "C:\FEM-project_24-25\Q6\belay_sim2-Solution_1.sdb"
+ FILE "C:\Users\tbeau\OneDrive\Documents\Universite\BAC3\F.E.M\FEM-project_24-25\Q6\belay_sim2-Solution_1.sdb"
 
 0DIAGNOSTICS:     0 WARNING(S),     0 ERROR(S)
 
@@ -471,25 +466,25 @@
  File size statistics
  File name                                                            Size
  -------------------------------------------------------------------------------
- S000018700\belay_sim2-Solution_1_as.w01                           1992072 Bytes
- S000018700\belay_sim2-Solution_1_as.w03                           1965360 Bytes
- S000018700\belay_sim2-Solution_1.u04                             43396448 Bytes
- S000018700\belay_sim2-Solution_1_as.w08                          16095056 Bytes
- S000018700\belay_sim2-Solution_1.u09                              2011984 Bytes
- S000018700\belay_sim2-Solution_1.u11                             17849856 Bytes
- S000018700\belay_sim2-Solution_1.u13                              4421536 Bytes
- S000018700\belay_sim2-Solution_1_as.w14                           2988120 Bytes
- belay_sim2-Solution_1_as.u18                                     48808144 Bytes
+ S000019364\belay_sim2-Solution_1_as.w01                            355656 Bytes
+ S000019364\belay_sim2-Solution_1_as.w03                            575376 Bytes
+ S000019364\belay_sim2-Solution_1.u04                              7616616 Bytes
+ S000019364\belay_sim2-Solution_1_as.w08                           2859264 Bytes
+ S000019364\belay_sim2-Solution_1.u09                               359200 Bytes
+ S000019364\belay_sim2-Solution_1.u11                              3132424 Bytes
+ S000019364\belay_sim2-Solution_1.u13                               776032 Bytes
+ S000019364\belay_sim2-Solution_1_as.w14                            533496 Bytes
+ belay_sim2-Solution_1_as.u18                                      8663200 Bytes
  C:\PROGRA~1\Siemens\NX2406\SIMULA~1\samcef\Exec\pilote.dat         216850 Bytes
- S000018700\belay_sim2-Solution_1_as.w41                           4199248 Bytes
- S000018700\belay_sim2-Solution_1_as.w42                           6023664 Bytes
- S000018700\belay_sim2-Solution_1_as.w43                             13392 Bytes
- S000018700\belay_sim2-Solution_1_as.w44                           6023664 Bytes
- C:\FEM-project_24-25\Q6\belay_sim2-Solution_1.sdb                41478648 Bytes
- S000018700\belay_sim2-Solution_1.u50                                   48 Bytes
- S000018700\belay_sim2-Solution_1_as.w51                            655184 Bytes
- S000018700\belay_sim2-Solution_1.u52                              1015808 Bytes
- belay_sim2-Solution_1.sam                                         6037488 Bytes
- C... project_24-25\Q6\S000018700\belay_sim2-Solution_1_as.w80     1584000 Bytes
+ S000019364\belay_sim2-Solution_1_as.w41                            769248 Bytes
+ S000019364\belay_sim2-Solution_1_as.w42                           1088064 Bytes
+ S000019364\belay_sim2-Solution_1_as.w43                             13392 Bytes
+ S000019364\belay_sim2-Solution_1_as.w44                           1088064 Bytes
+ C... AC3\F.E.M\FEM-project_24-25\Q6\belay_sim2-Solution_1.sdb    20357368 Bytes
+ S000019364\belay_sim2-Solution_1.u50                                   48 Bytes
+ S000019364\belay_sim2-Solution_1_as.w51                            115968 Bytes
+ S000019364\belay_sim2-Solution_1.u52                               196608 Bytes
+ belay_sim2-Solution_1.sam                                         1101888 Bytes
+ C... project_24-25\Q6\S000019364\belay_sim2-Solution_1_as.w80     1584000 Bytes
  C:\PROGRA~1\Siemens\NX2406\SIMULA~1\samcef\Exec\samcef.proc         90626 Bytes
  -------------------------------------------------------------------------------
