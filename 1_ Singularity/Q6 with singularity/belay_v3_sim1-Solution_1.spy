@@ -1,0 +1,27 @@
+!***********************************************************************
+! Bacon Spy File
+! Problem name: belay_v3_sim1-Solution_1
+! Creation Date: APR 19 2025 14:02:49
+!
+INPUT INIT
+EXIT
+;INPUT  "C:\Users\tbeau\OneDrive\Documents\Universite\BAC3\F.E.M\FEM-project_24-25\1_ Singularity\Q6\belay_v3_sim1-Solution_1.dat"
+! $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+!
+!              NX 2406 TRANSLATOR
+!   This file is compatible with Simcenter Samcef 2406 (30.1-01) and next versions
+!
+!              FEM FILE: C:\Users\tbeau\OneDrive\Documents\Universite\BAC3\F.E.M\FEM-project_24-25\1_ Singularity\Q6\belay_v3_fem1.fem
+!              SIM FILE: C:\Users\tbeau\OneDrive\Documents\Universite\BAC3\F.E.M\FEM-project_24-25\1_ Singularity\Q6\belay_v3_sim1.sim
+!         ANALYSIS TYPE: Simcenter Samcef - Axisymmetric and Other 2D Structural
+!         SOLUTION NAME: Solution 1
+!         SOLUTION TYPE: Linear Static Analysis
+!     SOLVER INPUT FILE: belay_v3_sim1-Solution_1.dat
+!         CREATION DATE: 19-avril-2025
+!         CREATION TIME: 14:02:47
+!              HOSTNAME: laptop_tom
+!              USERNAME: tbeau
+!                 UNITS: (N)(m)(kg)
+!
+! $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+MODE M -1 LECTURE 256
