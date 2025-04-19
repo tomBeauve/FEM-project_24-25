@@ -24,6 +24,8 @@ Servira peut-être également à déterminer le q_max
 Optimisation de la forme de la transition entre l'ellipse et le cercle
 
 --
+## Tips 
+Les prt contiennent plusieurs extrude "détachés", pour faire en sorte qu'ils ne forment qu'un seul corps dans la simulation => utiliser la fonction "stitch edges" dans le mesh, et sélectionner tous les extrude
 
 ## 📝 **Rapport**
 
