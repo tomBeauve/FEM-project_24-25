@@ -2,6 +2,29 @@
 
 Repo du projet de MECA0036-2 Finite Element Method.
 
+# 📁 Structure du projet
+
+## 🗂️ Dossiers
+
+### `0_ Orientation forces`
+Préliminaire: sans fillet, déterminer le sens des pressions à appliquer dans NX
+
+### `1_ Singularity`
+Observation (sans fillet), puis étude & suppression des singularités (avec fillet) 
+N'utiliser qu'un seul type de Mesh
+
+### `2_ FEA coarse meshes`
+Etude des différents types d'éléments (FEA), pièce sans singularités ( = avec fillet ), mesh grossiers tout faits par NX
+
+### `3_ Advanced meshes`
+Maillage avancé et raffiné, avec des mesh control,... pour améliorer la convergence des résultats. <br>
+Servira peut-être également à déterminer le q_max
+
+### `4_ Shape Optimization`
+Optimisation de la forme de la transition entre l'ellipse et le cercle
+
+--
+
 ## 📝 **Rapport**
 
 Le Rapport se trouve dans le fichier 
