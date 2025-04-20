@@ -1,7 +1,7 @@
 !***********************************************************************
 ! Bacon Spy File
 ! Problem name: belay_no_fillet_sim1-Solution_1
-! Creation Date: APR 19 2025 15:42:04
+! Creation Date: APR 20 2025 18:01:50
 !
 INPUT INIT
 EXIT
@@ -17,11 +17,11 @@ EXIT
 !         SOLUTION NAME: Solution 1
 !         SOLUTION TYPE: Linear Static Analysis
 !     SOLVER INPUT FILE: belay_no_fillet_sim1-Solution_1.dat
-!         CREATION DATE: 19-avril-2025
-!         CREATION TIME: 15:42:02
+!         CREATION DATE: 20-avril-2025
+!         CREATION TIME: 18:01:48
 !              HOSTNAME: laptop_tom
 !              USERNAME: tbeau
-!                 UNITS: (mN)(mm)(kg)
+!                 UNITS: (N)(m)(kg)
 !
 ! $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 MODE M -1 LECTURE 256
