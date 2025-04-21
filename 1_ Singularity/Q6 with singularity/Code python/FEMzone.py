@@ -12,8 +12,10 @@ import matplotlib.pyplot as plt
 size = [2]  # en mm pour le maillage (pas utilisé dans ce tracé directement)
 nombre_elements = [150, 896, 3496, 13283, 52045, 80944, 141484, 203150, 313289]
 
-von_mises_zone5 = [29, 78.20, 128.72, 201.49, 297.08, 340.13, 394.25, 443.55, 498.61]
-von_mises_zone6 = [22, 56.64, 92.21, 144.92, 212.32, 242.80, 280.79, 314.54, 354.67]
+von_mises_zone5 = [29, 78.20, 128.72, 201.49,
+                   297.08, 340.13, 394.25, 443.55, 498.61]
+von_mises_zone6 = [22, 56.64, 92.21, 144.92,
+                   212.32, 242.80, 280.79, 314.54, 354.67]
 
 # Initialiser la figure avec 2 sous-graphes (1 ligne, 2 colonnes)
 fig, axs = plt.subplots(1, 2, figsize=(14, 6))  # <-- 1 ligne, 2 colonnes
@@ -31,4 +33,4 @@ for i, ax in enumerate(axs.flatten()):
 
 plt.tight_layout()
 plt.show()
-
+plt.savefig('VM6,7.eps', dpi=300, bbox_inches='tight', format='eps')
