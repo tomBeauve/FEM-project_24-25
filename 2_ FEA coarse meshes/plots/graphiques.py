@@ -1,10 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-T3_area = [2.953108e-3, 2.953056e-3, 2.952994e-3, 2.952984e-3, 2.952980e-3, 2.952310e-3]
-T6_area = [2.952980e-3, 2.952978e-3, 2.952978e-3, 2.952978e-3, 2.952978e-3, 2.952309e-3]
-Q6_area = [2.953285e-3, 2.953056e-3, 2.953002e-3, 2.952984e-3, 2.952980e-3, 2.952310e-3]
-Q8_area = [2.952980e-3, 2.952978e-3, 2.952978e-3, 2.952978e-3, 2.952978e-3, 2.952309e-3]
+T3_area = [2.953108e3, 2.953056e3, 2.952994e3, 2.952984e3, 2.952980e3, 2.952310e3]
+T6_area = [2.952980e3, 2.952978e3, 2.952978e3, 2.952978e3, 2.952978e3, 2.952309e3]
+Q6_area = [2.953285e3, 2.953056e3, 2.953002e3, 2.952984e3, 2.952980e3, 2.952310e3]
+Q8_area = [2.952980e3, 2.952978e3, 2.952978e3, 2.952978e3, 2.952978e3, 2.952309e3]
 
 T3_time = [15, 15, 24, 51, 133, 278]
 T6_time = [16, 17, 37, 168, 493, 545]
@@ -31,7 +31,7 @@ plt.plot(T3_nelem, T3_area, marker='o', label='T3')
 plt.plot(T6_nelem, T6_area, marker='o', label='T6')
 plt.plot(Q6_nelem, Q6_area, marker='o', label='Q6')
 plt.plot(Q8_nelem, Q8_area , marker='o', label='Q8')
-plt.axhline(2.9494e-3 , label='Reference')
+plt.axhline(2.9526e3 , label='Reference')
 
 
 plt.xlabel('Number of elements ')
@@ -45,7 +45,7 @@ plt.plot(T3_ndof, T3_area, marker='o', label='T3')
 plt.plot(T6_ndof, T6_area, marker='o', label='T6')
 plt.plot(Q6_ndof, Q6_area, marker='o', label='Q6')
 plt.plot(Q8_ndof, Q8_area , marker='o', label='Q8')
-plt.axhline(2.9494e-3 , label='Reference')
+plt.axhline(2.9526e3 , label='Reference')
 
 
 plt.xlabel('Number of degrees of freedom ')
