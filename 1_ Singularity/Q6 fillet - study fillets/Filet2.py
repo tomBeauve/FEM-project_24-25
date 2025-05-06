@@ -73,5 +73,5 @@ plt.yticks(fontsize=14)  # Change font size of y-axis ticks
 plt.grid(True)
 plt.legend(fontsize=11)  # Display the legend
 plt.tight_layout()
-plt.savefig("von_mises_convergenceZONE2.eps", format='eps')
+plt.savefig("von_mises_filletZONE2.eps", format='eps')
 plt.show()
