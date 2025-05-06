@@ -1,0 +1,27 @@
+!***********************************************************************
+! Bacon Spy File
+! Problem name: belay_T3_sim6-Solution_1
+! Creation Date: APR 25 2025 10:20:22
+!
+INPUT INIT
+EXIT
+;INPUT  "C:\Users\lstei\OneDrive\Documents\A_COURS\FEm\FEM-project_24-25 - Copie\2_ FEA coarse meshes\T3\belay_T3_sim6-Solution_1.dat"
+! $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+!
+!              NX 2406 TRANSLATOR
+!   This file is compatible with Simcenter Samcef 2406 (30.1-01) and next versions
+!
+!              FEM FILE: C:\Users\lstei\OneDrive\Documents\A_COURS\FEm\FEM-project_24-25 - Copie\2_ FEA coarse meshes\T3\belay_T3_fem6.fem
+!              SIM FILE: C:\Users\lstei\OneDrive\Documents\A_COURS\FEm\FEM-project_24-25 - Copie\2_ FEA coarse meshes\T3\belay_T3_sim6.sim
+!         ANALYSIS TYPE: Simcenter Samcef - Axisymmetric and Other 2D Structural
+!         SOLUTION NAME: Solution 1
+!         SOLUTION TYPE: Linear Static Analysis
+!     SOLVER INPUT FILE: belay_T3_sim6-Solution_1.dat
+!         CREATION DATE: 25-avril-2025
+!         CREATION TIME: 10:20:01
+!              HOSTNAME: BOOK-DIR36TVIJ3
+!              USERNAME: lstei
+!                 UNITS: (N)(m)(kg)
+!
+! $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+MODE M -1 LECTURE 256
