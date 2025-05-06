@@ -1,0 +1,27 @@
+!***********************************************************************
+! Bacon Spy File
+! Problem name: belay_fillet_bis_sim19-Solution_1
+! Creation Date: MAY  5 2025 15:42:57
+!
+INPUT INIT
+EXIT
+;INPUT  "C:\Users\lstei\OneDrive - Universite de Liege\Documents\A_COURS\FEm\FEM-project_24-25 - Copie\2_ FEA coarse meshes\PRT with fillet\belay_fillet_bis_sim19-Solution_1.dat"
+! $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+!
+!              NX 2406 TRANSLATOR
+!   This file is compatible with Simcenter Samcef 2406 (30.1-01) and next versions
+!
+!              FEM FILE: C:\Users\lstei\OneDrive - Universite de Liege\Documents\A_COURS\FEm\FEM-project_24-25 - Copie\2_ FEA coarse meshes\PRT with fillet\belay_fillet_bis_fem19.fem
+!              SIM FILE: C:\Users\lstei\OneDrive - Universite de Liege\Documents\A_COURS\FEm\FEM-project_24-25 - Copie\2_ FEA coarse meshes\PRT with fillet\belay_fillet_bis_sim19.sim
+!         ANALYSIS TYPE: Simcenter Samcef - Axisymmetric and Other 2D Structural
+!         SOLUTION NAME: Solution 1
+!         SOLUTION TYPE: Linear Static Analysis
+!     SOLVER INPUT FILE: belay_fillet_bis_sim19-Solution_1.dat
+!         CREATION DATE: 05-mai-2025
+!         CREATION TIME: 15:42:52
+!              HOSTNAME: BOOK-DIR36TVIJ3
+!              USERNAME: lstei
+!                 UNITS: (N)(m)(kg)
+!
+! $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+MODE M -1 LECTURE 256
