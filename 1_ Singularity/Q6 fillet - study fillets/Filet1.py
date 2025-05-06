@@ -40,6 +40,7 @@ plt.show()
 """
 
 import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
 
 # Data
 number_of_elements05 = [1058, 3818, 13842, 52967, 81636, 140997, 203089, 313203]
@@ -58,18 +59,19 @@ von_mises = [von_mises_rayon05, von_mises_rayon1, von_mises_rayon2, von_mises_ra
 radius_labels = ['Radius 0.5 mm', 'Radius 1 mm', 'Radius 2 mm', 'Radius 5 mm']  # Legend labels
 
 # Create a single figure
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(8, 5))
 
 # Plot all curves on the same graph
 for i in range(4):
-    plt.plot(number_of_elements[i], von_mises[i], marker='o', linestyle='-', label=radius_labels[i])
+    plt.plot([x / 1000 for x in number_of_elements[i]], von_mises[i], marker='o', linestyle='-', label=radius_labels[i])
 
 # Graph settings
-plt.xlabel('Number of Elements [-]')
-plt.ylabel('Max Von Mises Stress [MPa]')
-plt.title('Convergence of Von Mises Stress for Different Radii for Zone 1')
+plt.xlabel('Number of Elements x $10^3$ [-]', fontsize=20)  # Update the label
+plt.ylabel('Max Von Mises Stress [MPa]', fontsize=20)
+plt.xticks(fontsize=17)  # Change font size of x-axis ticks
+plt.yticks(fontsize=17)  # Change font size of y-axis ticks
 plt.grid(True)
-plt.legend()  # Display the legend
+plt.legend(fontsize=11)  # Display the legend
 plt.tight_layout()
-plt.savefig("von_mises_convergenceZONE1.eps", format='eps')
+plt.savefig("von_mises_filletZONE1.eps", format='eps')
 plt.show()
