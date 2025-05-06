@@ -59,19 +59,19 @@ von_mises = [von_mises_rayon05, von_mises_rayon1, von_mises_rayon2, von_mises_ra
 radius_labels = ['Radius 0.5 mm', 'Radius 1 mm', 'Radius 2 mm', 'Radius 5 mm']
 
 # Create the figure
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(8, 5))
 
-# Plot all curves
+# Plot all curves on the same graph
 for i in range(4):
     plt.plot([x / 1000 for x in number_of_elements[i]], von_mises[i], marker='o', linestyle='-', label=radius_labels[i])
 
 # Graph settings
-plt.xlabel('Number of Elements x $10^3$ [-]', fontsize=16)  # Update the label
-plt.ylabel('Max Von Mises Stress [MPa]', fontsize=16)
-plt.xticks(fontsize=14)  # Change font size of x-axis ticks
-plt.yticks(fontsize=14)  # Change font size of y-axis ticks
+plt.xlabel('Number of Elements x $10^3$ [-]', fontsize=20)  # Update the label
+plt.ylabel('Max Von Mises Stress [MPa]', fontsize=20)
+plt.xticks(fontsize=17)  # Change font size of x-axis ticks
+plt.yticks(fontsize=17)  # Change font size of y-axis ticks
 plt.grid(True)
-plt.legend(fontsize=12.5)  # Display the legend
-plt.tight_layout()
+plt.legend(fontsize=11.5, loc="upper left")  # Display the legend
+plt.tight_layout() 
 plt.savefig("von_mises_filletZONE3.eps", format='eps')
 plt.show()
