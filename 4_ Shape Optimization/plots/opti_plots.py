@@ -30,6 +30,7 @@ plt.xticks(fontsize=18)
 plt.yticks(fontsize=18)
 plt.grid(True)
 plt.legend(fontsize=18)
+plt.savefig('TPE_opt.png', dpi=300, bbox_inches='tight')
 plt.show()
 
 # Graphique 2 – Déplacement
@@ -42,6 +43,7 @@ plt.xticks(fontsize=18)
 plt.yticks(fontsize=18)
 plt.grid(True)
 plt.legend(fontsize=18)
+plt.savefig('displacement_opt.png', dpi=300, bbox_inches='tight')
 plt.show()
 
 # Graphique 3 – Contrainte
@@ -54,4 +56,5 @@ plt.xticks(fontsize=18)
 plt.yticks(fontsize=18)
 plt.grid(True)
 plt.legend(fontsize=18)
+plt.savefig('Stress_opt.png', dpi=300, bbox_inches='tight')
 plt.show()
