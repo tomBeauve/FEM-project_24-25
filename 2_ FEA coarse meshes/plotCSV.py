@@ -19,7 +19,7 @@ for folder in folders:
 
 
 # Fonctions de tracé
-def plot_metric(x_key, y_key, ylabel, title, filename, reference_line=None):
+def plot_metric(x_key, y_key,xlabel, ylabel, title, filename, reference_line=None):
     plt.figure(figsize=(10, 6))
     for folder in folders:
         df = data[folder]
@@ -27,9 +27,9 @@ def plot_metric(x_key, y_key, ylabel, title, filename, reference_line=None):
     if reference_line is not None:
         plt.axhline(reference_line, color='gray',
                     linestyle='--', label='Référence')
-    plt.xlabel(x_key)
+    plt.xlabel(xlabel)
     plt.ylabel(ylabel)
-    plt.title(title)
+    #plt.title(title)
     plt.legend()
     plt.grid(True, alpha=0.7)
     plt.tight_layout()
@@ -38,18 +38,19 @@ def plot_metric(x_key, y_key, ylabel, title, filename, reference_line=None):
 
 
 # Tracés demandés
-plot_metric('NElem', 'TPE', 'TPE', "TPE vs NElem", 'TPE_vs_NElem.png')
-plot_metric('NDOF', 'TPE', 'TPE', "TPE vs NDOF", 'TPE_vs_NDOF.png')
-plot_metric('NElem', 'Area', 'Area', "Area vs NElem",
+plot_metric('NElem', 'TPE','Number of elements [-]', 'TPE [J]', "TPE vs NElem", 'TPE_vs_NElem.png')
+plot_metric('NDOF','TPE','Number of degrees of freedom [-]', 'TPE [J]', "TPE vs NDOF", 'TPE_vs_NDOF.png')
+plot_metric('NElem', 'Area','Number of elements [-]', 'Area [$mm^2$]', "Area vs NElem",
             'Area_vs_NElem.png', reference_line=True_area)
-plot_metric('NDOF', 'Area', 'Area', "Area vs NDOF",
+plot_metric('NDOF', 'Area','Number of degrees of freedom [-]', 'Area [$mm^2$]', "Area vs NDOF",
             'Area_vs_NDOF.png', reference_line=True_area)
-plot_metric('NElem', 'CPU', 'CPU (s)', "CPU vs NElem", 'CPU_vs_NElem.png')
-plot_metric('NDOF', 'CPU', 'CPU (s)', "CPU vs NDOF", 'CPU_vs_NDOF.png')
-# plot_metric('CPU', 'TPE', 'TPE', "TPE vs CPU", 'TPE_vs_CPU.png')
+plot_metric('NElem', 'CPU','Number of elements [-]', 'CPU [s]', "CPU vs NElem", 'CPU_vs_NElem.png')
+plot_metric('NDOF', 'CPU','Number of degrees of freedom [-]', 'CPU [s]', "CPU vs NDOF", 'CPU_vs_NDOF.png')
+plot_metric('TPE', 'CPU','TPE [J]', 'CPU [s]', "TPE vs CPU", 'TPE_vs_CPU.png')
+plot_metric('NElem', 'epsilon_max','Number of elements [-]', 'Displacement [mm]','','Displacement_vs_NElem.png')
 
 # Tracés Sigma_i vs NElem (i = 1 à 6)
 for i in range(1, 7):
     sigma_col = f"Sigma_{i}"
-    plot_metric('NElem', sigma_col, f'{sigma_col}',
+    plot_metric('NElem', sigma_col,'Number of elements [-]', f'{sigma_col} [MPa]',
                 f"Stress in zone {i} vs NElem", f"Stress{i}_vs_NElem.png")
