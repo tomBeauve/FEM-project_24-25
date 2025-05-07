@@ -25,9 +25,17 @@ def plot_metric(x_key, y_key,xlabel, ylabel, title, filename, reference_line=Non
     for folder in folders:
         df = data[folder]
         if x_key == 'NElem':
-            df[x_key] = np.array(df[x_key]) / 1e5 # Conversion to 10^5
+            # Create a temporary x_values for plotting, leaving the original data unchanged
+            x_values = np.array(df[x_key]) / 1e5 if x_key == 'NElem' else df[x_key]
+            plt.plot(x_values, df[y_key], marker='o', label=folder)
             xlabel = 'Number of elements x $10^5$ [-]'
-        plt.plot(df[x_key], df[y_key], marker='o', label=folder)
+        elif x_key == 'NDOF':
+            # Create a temporary x_values for plotting, leaving the original data unchanged
+            x_values = np.array(df[x_key]) / 1e6 if x_key == 'NDOF' else df[x_key]
+            plt.plot(x_values, df[y_key], marker='o', label=folder)
+            xlabel = 'Number of degrees of freedom x $10^6$ [-]'
+        else:
+            plt.plot(df[x_key], df[y_key], marker='o', label=folder)
         
     if reference_line is not None:
         plt.axhline(reference_line, color='gray',
